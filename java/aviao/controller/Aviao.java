@@ -21,8 +21,26 @@ public class Aviao {
     public void setAltura( float altura ){
         this.altura = altura; 
     }
-    public void imprimirOk() {
-        System.out.println("Ok");
+    
+   public String getModelo() {
+        return modelo;
+   }
+   
+   public String getIdentificador() {
+        return identificador;
+   }
+
+   public boolean getMotor() {
+        return motor;
+   }
+
+    public void getAltura(){
+        return altura; 
     }
+    
+
+   public void imprimirOk() {
+       System.out.println("Ok");
+   }
 }
 
