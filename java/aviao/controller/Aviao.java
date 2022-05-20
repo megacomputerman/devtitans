@@ -34,11 +34,10 @@ public class Aviao {
         return motor;
    }
 
-    public void getAltura(){
+    public float getAltura(){
         return altura; 
     }
     
-
    public void imprimirOk() {
        System.out.println("Ok");
    }
