@@ -10,6 +10,9 @@ FILE=
 CLASSES = \
 	aviao/view/Main.java \
 	aviao/controller/Aviao.java \
+        aviao/controller/Motor.java \
+        aviao/controller/Passageiro.java \
+        aviao/controller/MotorTurbinado.java \
 
 MAIN = aviao/view/Main
 
