@@ -57,7 +57,7 @@ public class AguiaGigante implements Motorizavel {
         {
             result = getForca();
         }
-        return 50.0f;
+        return result;
     }
     public void ligar()
     {
