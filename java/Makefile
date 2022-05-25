@@ -14,6 +14,7 @@ CLASSES = \
     aviao/controller/Passageiro.java \
     aviao/controller/MotorTurbinado.java \
     aviao/controller/Motorizavel.java \
+    aviao/controller/AguiaGigante.java \
 
 MAIN = aviao/view/Main
 

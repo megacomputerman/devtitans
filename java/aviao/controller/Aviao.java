@@ -95,19 +95,19 @@ public class Aviao {
         this.identificador = identificador; 
     }
     
-    private Motorizavel getMotorEsquerdo() {
+    public Motorizavel getMotorEsquerdo() {
         return this.motorEsquerdo;
     }
     
-    private void setMotorEsquerdo( Motorizavel motorEsquerdo ){
+    public void setMotorEsquerdo( Motorizavel motorEsquerdo ){
         this.motorEsquerdo = motorEsquerdo; 
     }
     
-    private Motorizavel getMotorDireito() {
+    public Motorizavel getMotorDireito() {
         return this.motorDireito;
     }
     
-    private void setMotorDireito( Motorizavel motorDireito ){
+    public void setMotorDireito( Motorizavel motorDireito ){
         this.motorDireito = motorDireito; 
     }
     
@@ -145,8 +145,8 @@ public class Aviao {
     
     public void ligarMotor()
     {
-        getMotorEsquerdo().desligar();
-        getMotorDireito().desligar();
+        getMotorEsquerdo().ligar();
+        getMotorDireito().ligar();
         /* outra forma:
         Motor esquerdo = getMotorEsquerdo();
         Motor direito = getMotorDireito();

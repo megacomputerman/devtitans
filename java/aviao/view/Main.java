@@ -27,10 +27,20 @@ public class Main {
       Passageiro wall = new Passageiro("wall", "cst", "51");      
       Passageiro tesla = new Passageiro("tesla", "miton", "52");      
 
+      System.out.println("========================================================================" );
+      System.out.println("Criando e instalando as aguias");
+      System.out.println("========================================================================" );
+      AguiaGigante phoenix = new AguiaGigante(1000.0f, "Phoenix", 200.0f ); 
+      AguiaGigante galinha = new AguiaGigante(1000.0f, "GalinhaqVooa", 200.0f ); 
+
       //Lab1
       // Etapa 1	   
       Aviao aviao = new Aviao("Tesla", "infinit", motor1, motor2 ); 
       aviao.imprimirOk();
+      
+      aviao.setMotorEsquerdo(galinha);
+      aviao.setMotorDireito(phoenix);
+      
 
       //AddPassageiro(lula, aviao);
       //AddPassageiro(mito, aviao);
@@ -110,7 +120,6 @@ public class Main {
       
       //aviao.desembarcarPassageiros();
       //aviao.imprimirListaDePassageiros();
-
     }
 
    public static void printAviao( Aviao aviao ){
