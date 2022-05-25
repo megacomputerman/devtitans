@@ -15,6 +15,7 @@ CLASSES = \
     aviao/controller/MotorTurbinado.java \
     aviao/controller/Motorizavel.java \
     aviao/controller/AguiaGigante.java \
+    aviao/controller/TorreDeControle.java \
 
 MAIN = aviao/view/Main
 

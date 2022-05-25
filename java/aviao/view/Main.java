@@ -19,6 +19,8 @@ public class Main {
       //motor2.getModelo();
       //motor2.ligar();
      
+      TorreDeControle t1 = new TorreDeControle( "torre 1" );
+      TorreDeControle t2 = new TorreDeControle( "torre 2" );
       //Lab2
       // Etapa 4
       Passageiro lula = new Passageiro("Lula", "ladronis", "13");
@@ -37,6 +39,9 @@ public class Main {
       // Etapa 1	   
       Aviao aviao = new Aviao("Tesla", "infinit", motor1, motor2 ); 
       aviao.imprimirOk();
+      
+      aviao.addObserver(t1);
+      aviao.addObserver(t2);
       
       aviao.setMotorEsquerdo(galinha);
       aviao.setMotorDireito(phoenix);

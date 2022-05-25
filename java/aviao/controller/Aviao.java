@@ -1,9 +1,10 @@
 package aviao.controller;
 
 import java.util.*;
+import java.util.Observable;
 //import java.util.ArrayList;
 
-public class Aviao { 
+public class Aviao extends Observable { 
     private String modelo;
     private String identificador;
     private Motorizavel motorEsquerdo;
@@ -263,23 +264,29 @@ public class Aviao {
     }
     
     public void atualizarStatusVoo(){
+        String status = "Estou em solo";
         if( getEmVoo() && (getVelocidade() >= 200.0f) )
         {
             System.out.println("Estou voando...");
         }
         else if( getEmVoo() && (getVelocidade() < 200.0f) ){
             setEmVoo(false);
+            status = "Estou aterrisando...";
             System.out.println("Estou aterrisando...");
         }
         else if( (getEmVoo() == false) && (getVelocidade() < 200.0f))
         {
+            status = "Estou em solo...";
             System.out.println("Estou em solo...");
         }
         else if( (getEmVoo() == false) && (getVelocidade() >= 200.0f) ){
+            status = "Estou decolando...";
             setEmVoo(true);
             System.out.println("Estou decolando...");
         }
-//        imprimeEstadoMotor();
+        String notification = getModelo() + " " + getIdentificador() + " " + status;
+        setChanged();
+        notifyObservers(notification);
     }
     
     public void imprimirOk() {
