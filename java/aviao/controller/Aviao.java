@@ -6,14 +6,14 @@ import java.util.*;
 public class Aviao { 
     private String modelo;
     private String identificador;
-    private Motor motorEsquerdo;
-    private Motor motorDireito;
+    private Motorizavel motorEsquerdo;
+    private Motorizavel motorDireito;
     private float altura;
     private float velocidade;
     private boolean emVoo;
     private ArrayList<Passageiro> listaPassageiros;
     
-    public Aviao(String modelo, String identificador, Motor esquerdo, Motor direito){
+    public Aviao(String modelo, String identificador, Motorizavel esquerdo, Motorizavel direito){
         setModelo(modelo);
         setIdentificador(identificador);
         setMotorEsquerdo(esquerdo);
@@ -95,19 +95,19 @@ public class Aviao {
         this.identificador = identificador; 
     }
     
-    private Motor getMotorEsquerdo() {
+    private Motorizavel getMotorEsquerdo() {
         return this.motorEsquerdo;
     }
     
-    private void setMotorEsquerdo( Motor motorEsquerdo ){
+    private void setMotorEsquerdo( Motorizavel motorEsquerdo ){
         this.motorEsquerdo = motorEsquerdo; 
     }
     
-    private Motor getMotorDireito() {
+    private Motorizavel getMotorDireito() {
         return this.motorDireito;
     }
     
-    private void setMotorDireito( Motor motorDireito ){
+    private void setMotorDireito( Motorizavel motorDireito ){
         this.motorDireito = motorDireito; 
     }
     
@@ -145,13 +145,14 @@ public class Aviao {
     
     public void ligarMotor()
     {
+        getMotorEsquerdo().desligar();
+        getMotorDireito().desligar();
+        /* outra forma:
         Motor esquerdo = getMotorEsquerdo();
         Motor direito = getMotorDireito();
-        
         esquerdo.ligar();
         direito.ligar();
- //       setMotor(true);
- //       System.out.println("Vrrummmm");
+        */
     }
     
     public void desligarMotor()

@@ -12,6 +12,12 @@ public class Main {
       //Motor motor2 = new Motor("tesla", 50.0f);
       Motor motor1 = new MotorTurbinado("eistein", 50.0f);
       Motor motor2 = new MotorTurbinado("tesla", 50.0f);
+      //MotorTurbinado motor3 = new MotorTurbinado("teslak", 50.0f);
+      
+      //motor3.ligar();
+      //motor3.getModelo();
+      //motor2.getModelo();
+      //motor2.ligar();
      
       //Lab2
       // Etapa 4

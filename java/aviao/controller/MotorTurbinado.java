@@ -7,7 +7,7 @@ public class MotorTurbinado extends Motor{
         super(modelo, potencia);
     }
     
-    protected void ligar()
+    public void ligar()
     {
         setAtivo(true);
         System.out.println("TRUMMMMMMM….");
@@ -18,6 +18,4 @@ public class MotorTurbinado extends Motor{
         float p2 = (float) Math.round(p1*100)/100;
         return p2;    
     }    
-    
-
 }
